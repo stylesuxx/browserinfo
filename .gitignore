@@ -1,0 +1,5 @@
+MANIFEST
+nosetests.json
+*.pyc
+dist
+.coverage
