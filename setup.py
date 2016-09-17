@@ -12,5 +12,4 @@ setup(
     url='https://github.com/stylesuxx/browserinfo',
     download_url=('https://github.com/stylesuxx/browserinfo/tarball/%s' %
                   (__version__)),
-    long_description=open('README.md').read(),
     license='MIT')
