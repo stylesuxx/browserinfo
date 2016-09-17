@@ -1,6 +1,6 @@
 from nose.tools import assert_equal
 
-from browserinfo.Browserinfo import mostRecent, mostPopular
+from browserinfo import mostRecent, mostPopular
 
 
 class testBrowserInfo():
