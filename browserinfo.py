@@ -11,14 +11,40 @@ recentXpath = ('(//div[@class="datatable"])[1]//tr/td[2]/a/text()')
 popularXpath = ('(//div[@class="datatable"])[2]//tr/td[2]/a/text()')
 
 
+def popular(amount=20):
+    """Fetches populsr UA strings.
+
+    Retrieves most popular UA strings, up to a maximum of 20.
+
+    :param amount: The amount of UA strings to retrieve
+    :type amount: int
+    :returns: List of UA strings
+    :rtype: list
+
+    :Example:
+
+    >>> import browserinfo
+    >>> browserinfo.popular(1)
+    ['Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; FSL 7.0.6.01001)']
+
+    """
+
+    f = urllib.urlopen(baseUrl)
+    tree = html.fromstring(f.read())
+    items = tree.xpath(popularXpath)
+
+    return items[:amount]
+
+
 def recent(amount=20):
-    """Fetches UA strings.
+    """Fetches recent UA strings.
 
     Retrieves most recent UA strings, up to a maximum of 20.
 
     :param amount: The amount of UA strings to retrieve
     :type amount: int
     :returns: List of UA strings
+    :rtype: list
 
     :Example:
 
@@ -31,15 +57,5 @@ def recent(amount=20):
     f = urllib.urlopen(baseUrl)
     tree = html.fromstring(f.read())
     items = tree.xpath(recentXpath)
-
-    return items[:amount]
-
-
-def popular(amount=20):
-    """Docstring for most recent"""
-
-    f = urllib.urlopen(baseUrl)
-    tree = html.fromstring(f.read())
-    items = tree.xpath(popularXpath)
 
     return items[:amount]
