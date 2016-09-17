@@ -16,8 +16,16 @@ def recent(amount=20):
 
     Retrieves most recent UA strings, up to a maximum of 20.
 
-    Kwargs:
-        amount (int): Amount of UA strings to retrieve.
+    :param amount: The amount of UA strings to retrieve
+    :type amount: int
+    :returns: List of UA strings
+
+    :Example:
+
+    >>> import browserinfo
+    >>> browserinfo.recent(1)
+    ['Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36']
+
     """
 
     f = urllib.urlopen(baseUrl)
