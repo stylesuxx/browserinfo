@@ -1,5 +1,8 @@
-browserinfo module
-==================
+browserinfo package
+===================
+
+Module contents
+---------------
 
 .. automodule:: browserinfo
     :members:
