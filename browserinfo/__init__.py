@@ -1,1 +1,4 @@
-__version__ = '0.1.0'
+from .browserinfo import (recent, popular, DOMChanged, BrowserinfoError,
+                          __repository__, __version__)
+
+__all__ = ['popular', 'recent', 'BrowserinfoError', 'DOMChanged']
