@@ -1,5 +1,5 @@
-browser-info
-============
+browserinfo
+===========
 
 .. toctree::
    :maxdepth: 4

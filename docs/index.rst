@@ -7,7 +7,7 @@ Welcome to browserinfo's documentation!
 =======================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
 
    modules
 
