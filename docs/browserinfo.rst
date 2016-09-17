@@ -1,8 +1,8 @@
 browserinfo package
 ===================
 
-----------
 Submodules
+----------
 
 browserinfo.browserinfo module
 ------------------------------
