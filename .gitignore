@@ -3,3 +3,4 @@ nosetests.json
 *.pyc
 dist
 .coverage
+*.egg-info
