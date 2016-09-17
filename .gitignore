@@ -1,2 +1,4 @@
+MANIFEST
 nosetests.json
 *.pyc
+dist
