@@ -11,6 +11,14 @@ recentXpath = ('(//div[@class="datatable"])[1]//tr/td[2]/a/text()')
 popularXpath = ('(//div[@class="datatable"])[2]//tr/td[2]/a/text()')
 
 
+def _getResults(amount, xPath):
+    f = urllib.urlopen(baseUrl)
+    tree = html.fromstring(f.read())
+    items = tree.xpath(xPath)
+
+    return items[:amount]
+
+
 def popular(amount=20):
     """Fetches populsr UA strings.
 
@@ -29,11 +37,7 @@ def popular(amount=20):
 
     """
 
-    f = urllib.urlopen(baseUrl)
-    tree = html.fromstring(f.read())
-    items = tree.xpath(popularXpath)
-
-    return items[:amount]
+    return _getResults(amount, popularXpath)
 
 
 def recent(amount=20):
@@ -54,8 +58,4 @@ def recent(amount=20):
 
     """
 
-    f = urllib.urlopen(baseUrl)
-    tree = html.fromstring(f.read())
-    items = tree.xpath(recentXpath)
-
-    return items[:amount]
+    return _getResults(amount, recentXpath)
