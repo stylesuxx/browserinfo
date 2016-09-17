@@ -9,14 +9,25 @@ import urllib
 baseUrl = 'http://www.browser-info.net/useragents'
 recentXpath = ('(//div[@class="datatable"])[1]//tr/td[2]/a/text()')
 popularXpath = ('(//div[@class="datatable"])[2]//tr/td[2]/a/text()')
+limit = 20
 
 
 def _getResults(amount, xPath):
+    amount = _sanitizeAmount(amount)
     f = urllib.urlopen(baseUrl)
     tree = html.fromstring(f.read())
     items = tree.xpath(xPath)
 
     return items[:amount]
+
+
+def _sanitizeAmount(amount):
+    if amount < 0:
+        return 0
+    if amount > limit:
+        return limit
+
+    return amount
 
 
 def popular(amount=20):
