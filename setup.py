@@ -1,6 +1,6 @@
 from setuptools import setup
 
-from browserinfo import __version__
+from browserinfo import __version__, __repository__
 
 try:
     import pypandoc
@@ -16,7 +16,7 @@ setup(
     long_description=long_description,
     author='Chris Landa',
     author_email='stylesuxx@gmail.com',
-    url='https://github.com/stylesuxx/browserinfo',
+    url=__repository__,
     download_url=('https://github.com/stylesuxx/browserinfo/tarball/%s' %
                   (__version__)),
     license='MIT',
