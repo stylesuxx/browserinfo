@@ -4,11 +4,13 @@ from browserinfo import __version__
 
 setup(
     name='browserinfo',
+    packages=['browserinfo'],
     version=__version__,
     description='API wrapper for browser-info.net',
-    long_description=open('README.md').read(),
     author='Chris Landa',
     author_email='stylesuxx@gmail.com',
     url='https://github.com/stylesuxx/browserinfo',
-    license='MIT',
-    packages=['browserinfo'])
+    download_url=('https://github.com/stylesuxx/browserinfo/tarball/%s' %
+                  (__version__)),
+    long_description=open('README.md').read(),
+    license='MIT')
