@@ -3,7 +3,7 @@ import urllib
 
 baseUrl = 'http://www.browser-info.net/useragents'
 recentXpath = ('(//div[@class="datatable"])[1]//tr/td[2]/a/text()')
-popularXpath = ('(//div[@class="datatable"])[1]//tr/td[2]/a/text()')
+popularXpath = ('(//div[@class="datatable"])[2]//tr/td[2]/a/text()')
 
 
 def mostRecent(amount=20):
