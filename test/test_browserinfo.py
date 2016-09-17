@@ -1,6 +1,6 @@
 from nose.tools import assert_equal
 
-from browserinfo import mostRecent, mostPopular
+from browserinfo.Browserinfo import mostRecent, mostPopular
 
 
 class testBrowserInfo():
@@ -28,14 +28,14 @@ class testBrowserInfo():
         print results
         assert_equal(len(results), 20)
 
-    def test_10_most_recent(self):
+    def test_10_most_popular(self):
         results = mostPopular(10)
 
         print results
         assert_equal(len(results), 10)
 
-    def test_100_most_recent(self):
-        results = mostPopular(100)
+    def test_100_most_popular(self):
+        results = mostRecent(100)
 
         print results
         assert_equal(len(results), 20)
