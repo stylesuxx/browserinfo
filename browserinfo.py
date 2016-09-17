@@ -1,3 +1,7 @@
+"""Lightweight API wrapper for
+`browser-info.net <http://www.browser-info.net/useragents>`_.
+"""
+
 from lxml import html
 import urllib
 
@@ -7,7 +11,7 @@ recentXpath = ('(//div[@class="datatable"])[1]//tr/td[2]/a/text()')
 popularXpath = ('(//div[@class="datatable"])[2]//tr/td[2]/a/text()')
 
 
-def mostRecent(amount=20):
+def recent(amount=20):
     """Fetches UA strings.
 
     Retrieves most recent UA strings, up to a maximum of 20.
@@ -23,7 +27,7 @@ def mostRecent(amount=20):
     return items[:amount]
 
 
-def mostPopular(amount=20):
+def popular(amount=20):
     """Docstring for most recent"""
 
     f = urllib.urlopen(baseUrl)
