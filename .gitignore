@@ -2,7 +2,7 @@ MANIFEST
 nosetests.json
 *.pyc
 dist
-.coverage
+*.coverage
 *.egg-info
 _build
 _static
