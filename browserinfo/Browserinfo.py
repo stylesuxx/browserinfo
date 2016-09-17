@@ -14,9 +14,9 @@ def mostRecent(amount=20):
     return items[:amount]
 
 
-def mostPopular(amount):
+def mostPopular(amount=20):
     f = urllib.urlopen(baseUrl)
     tree = html.fromstring(f.read())
-    item = tree.xpath(popularXpath)
+    items = tree.xpath(popularXpath)
 
     return items[:amount]
