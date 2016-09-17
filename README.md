@@ -22,9 +22,9 @@ Use pip:
     pip install -U browserinfo
 
 ## Building doc
-From the root of the repository run:
+From the root of the directory run:
 
-    sphinx-apidoc -o docs/ . setup.py -f && cd docs && make html && cd ..
+    sphinx-apidoc -o docs/ browserinfo -f && cd docs && make html && cd ..
 
 ## Building Dist Package
 To build a distributable package run:
